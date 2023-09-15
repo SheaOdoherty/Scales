@@ -1,11 +1,19 @@
-void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
-}
-void draw() {
-  //your code here
+void setup()
+{
+size(1000,1000);
+background((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 }
 void scale(int x, int y) {
-  //your code here
+    noStroke();
+    fill(245,245,220);
+    ellipse(x,y, 30,30);
+    
 }
-
+void draw() {
+  background((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+  scale(100, 100);
+  for(int y=0; y< 1000; y+=30) {
+    for(int x =0; x <1000; x +=30)
+      scale(x,y);
+  }
+}
